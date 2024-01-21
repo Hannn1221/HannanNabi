@@ -1,0 +1,150 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 120px; /* Adjust this value as needed */
+    padding: 0.5em; /* Space around the title */
+    padding-bottom: 2em; /* Space below the header */
+    z-index: 1001; /* Higher z-index than the nav */
+}
+
+header h1 {
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: 60;
+    color: black;
+    padding: 0;
+    margin: 0; /* Remove the default margin */
+}
+
+/* Reset default styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styling */
+nav {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: black;
+    margin: 0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+nav a:hover {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+#about-me p {
+    text-align: justify;
+}
+
+/* Add padding to the image */
+img {
+    float: left;
+    padding: 0.2em;
+    display: flexbox;
+    margin-right: 200px; /* Adjust this value as needed */
+    width: 65%; /* Adjust this value as needed */
+    height: auto; /* Keeps the aspect ratio */
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust this value to change the space between the images */
+    justify-content: center; /* Horizontal centering */
+    align-content: center; /* Vertical centering */
+}
+
+.image-grid img {
+    width: 100%; /* Full width of the cell */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the entire area of the cell without distortion */
+    display: block; /* Removes the default space below the image */
+    margin: 0 auto; /* Centers the image within its cell */
+}
+
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Clear the float after the image */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style for the content sections */
+section {
+    text-align: center;
+    margin: auto;
+    padding: 2em;
+    width: 80%; /* Adjust this value as needed */
+    margin-top: 50px; /* Space for the fixed navbar */
+}
+
+/* Push footer to the bottom */
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    color: #fff; /* White text color for black background */
+    font-family: Arial, sans-serif;
+    background-color: grey; /* Black color */
+    padding-top: 50px; /* Space for the fixed navbar */
+}
+#contact {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1em; /* Space around the content */
+    margin: 0.5em auto; /* Space between the sections and auto margins on the sides */
+    height: auto;
+    width: 20%; /* Adjust this value as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
