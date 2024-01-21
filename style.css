@@ -2,7 +2,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    margin-left: 120px; /* Adjust this value as needed */
+    margin-left: 40px; /* Adjust this value as needed */
     padding: 0.5em; /* Space around the title */
     padding-bottom: 2em; /* Space below the header */
     z-index: 1001; /* Higher z-index than the nav */
