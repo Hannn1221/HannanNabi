@@ -1,176 +1,9 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-left: 40px; /* Adjust this value as needed */
-    padding: 0.5em; /* Space around the title */
-    padding-bottom: 2em; /* Space below the header */
-    z-index: 1001; /* Higher z-index than the nav */
-}
-
-header h1 {
-    font-size: x-large;
-    font-family: sans-serif;
-    font-weight: 60;
-    color: black;
-    padding: 0;
-    margin: 0; /* Remove the default margin */
-}
-.about {
-    top: 2%;
-    bottom: auto;
-    display: flex;
-}
-.about .image {
-    order: 1;
-}
-
-.about .text {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    color: #fff; /* White text color for black background */
-    font-family: Arial, sans-serif;
-    background-color: grey; /* Black color */
-    padding-top: 50px; /* Space for the fixed navbar */
-    order: 2;
-}
-.light-bulb img {
-    max-width: 55px; /* Adjust this value as needed */
-    height: auto; /* Adjust this value as needed */
-    object-fit: cover;
-}
-
-.light-bulb {
-    z-index: 1500;
-    display: flex;
-    position: absolute;
-    top: 128px;
-    bottom: auto;
-    right: 25px;
-    left: auto;
-}
-
-#lighton {
-    display: none;
-}
-.light-bulb:hover #lighton {
-    display: block;
-}
-
-.light-bulb:hover #lightoff {
-    display: none;
-}
-
 /* Reset default styles */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-html {
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation bar styling */
-nav {
+* {
     box-sizing: border-box;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    margin: 0;
-    top: 0;
-    z-index: 1000;
 }
 
-nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    color: black;
-    margin: 0;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color on hover */
-nav a:hover {
-    background-color: grey;
-    color: whitesmoke;
-}
-
-#about-me p {
-    text-align: justify;
-}
-
-/* Add padding to the image */
-img {
-    float: left;
-    padding: 0.2em;
-    display: flexbox;
-    margin-right: 200px; /* Adjust this value as needed */
-    width: 65%; /* Adjust this value as needed */
-    height: auto; /* Keeps the aspect ratio */
-}
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* Adjust this value to change the space between the images */
-    justify-content: center; /* Horizontal centering */
-    align-content: center; /* Vertical centering */
-}
-
-.image-grid img {
-    width: 100%; /* Full width of the cell */
-    height: auto; /* Keep the aspect ratio */
-    object-fit: cover; /* Ensures the image covers the entire area of the cell without distortion */
-    display: block; /* Removes the default space below the image */
-    margin: 0 auto; /* Centers the image within its cell */
-}
-
-.work-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-/* Clear the float after the image */
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* Style for the content sections */
-section {
-    text-align: center;
-    margin: auto;
-    padding: 2em;
-    width: 80%; /* Adjust this value as needed */
-    margin-top: 50px; /* Space for the fixed navbar */
-}
-
-/* Push footer to the bottom */
-footer {
-    text-align: center;
-    padding-top: 20px;
-}
-
+/* Default styles */
 body {
     margin: 0;
     padding: 0;
@@ -180,24 +13,176 @@ body {
     background-color: grey; /* Black color */
     padding-top: 50px; /* Space for the fixed navbar */
 }
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    z-index: 1001;
+    text-align: center;
+}
+
+header h1 {
+    position: relative;
+    bottom: 10px;
+    left: -620px;
+    margin-left: 10px; /* Adjust this value as needed */
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+}
+
+/* Navigation bar styling */
+nav {
+    padding: 4px 3px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    bottom: -5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+nav li {
+    bottom: -30px;
+    margin: 5px; /* Add some margin between navigation items */
+}
+
+nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+nav a:hover {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+/* Content section styling */
+section {
+    text-align: center;
+    padding: 2em;
+    width: 90%; /* Adjust this value for smaller screens */
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* About Me section styling */
+#about {
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about .image-row {
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about .image-row img {
+    margin-right: 0; /* Remove the right margin for images in the about section */
+    width: 100%; /* Make images take up the full width of the container */
+    max-width: 30%; /* Remove the maximum width for responsiveness */
+    margin-bottom: 10px; /* Add some margin below each image */
+}
+
+/* Light-bulb styling */
+.light-bulb {
+    position: relative;
+    right: -235px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.light-bulb img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.light-bulb #lighton {
+    display: none;
+}
+
+.light-bulb:hover #lighton {
+    display: block;
+}
+
+.light-bulb:hover #lightoff {
+    display: none;
+}
+
+/* ... (Rest of the styles) ... */
+
+/* Portfolio section styling */
+#portfolio {
+    text-align: center;
+}
+
+/* Outside Work section styling */
+#outside-work {
+    text-align: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contact Me section styling */
 #contact {
     color: white;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent; /* Transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 1em; /* Space around the content */
-    margin: 0.5em auto; /* Space between the sections and auto margins on the sides */
-    height: auto;
-    width: 20%; /* Adjust this value as needed */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 0.5em auto;
+    width: 80%;
+    box-sizing: border-box;
 }
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
 /* CSS for medium screens */
-@media screen and (max-width: 768px)  {
-    .container {
-        flex-direction: column;
-    }
-}
+@media screen and (max-width: 768px) {
     body {
         font-size: 0.8em;
     }
@@ -205,13 +190,15 @@ body {
     header {
         margin-left: 20px;
     }
+
     img {
         float: left;
         padding: 0.2em;
         display: flexbox;
-        margin-right: 200px; /* Adjust this value as needed */
-        width: 65%; /* Adjust this value as needed */
+        margin-right: 20px; /* Adjust this value as needed */
+        width: 100%; /* Adjust this value as needed */
         height: auto; /* Keeps the aspect ratio */
+    }
 
     nav ul {
         flex-direction: column;
@@ -231,18 +218,21 @@ body {
     header {
         margin-left: 10px;
     }
-img {
-    float: left;
-    padding: 0.2em;
-    display: flexbox;
-    margin-right: 200px; /* Adjust this value as needed */
-    width: 65%; /* Adjust this value as needed */
-    height: auto; /* Keeps the aspect ratio */
+
+    img {
+        float: left;
+        padding: 0.2em;
+        display: flexbox;
+        margin-right: 10px; /* Adjust this value as needed */
+        width: 100%; /* Adjust this value as needed */
+        height: auto; /* Keeps the aspect ratio */
     }
+
     nav ul {
         flex-direction: column;
     }
 
     nav a {
-        padding: 8px 10px;
+        padding: 2px 4px;
     }
+}
