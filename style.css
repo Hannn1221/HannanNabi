@@ -114,14 +114,14 @@ section {
 /* Light-bulb styling */
 .light-bulb {
     position: relative;
-    right: -235px;
+    right: -270px;
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
 .light-bulb img {
-    max-width: 200px;
+    max-width: 137px;
     height: auto;
     object-fit: cover;
     margin-right: 10px;
