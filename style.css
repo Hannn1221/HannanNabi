@@ -17,6 +17,8 @@ header h1 {
     margin: 0; /* Remove the default margin */
 }
 .about {
+    top: 2%;
+    bottom: auto;
     display: flex;
 }
 .about .image {
@@ -33,19 +35,17 @@ header h1 {
     padding-top: 50px; /* Space for the fixed navbar */
     order: 2;
 }
-.light-bulb {
-    display: flex;
-    position: absolute;
-    top: 70px;
-    bottom: auto;
-    right: 25px;
-    left: auto;
+.light-bulb img {
+    max-width: 55px; /* Adjust this value as needed */
+    height: auto; /* Adjust this value as needed */
+    object-fit: cover;
 }
 
 .light-bulb {
+    z-index: 1500;
     display: flex;
     position: absolute;
-    top: 90px;
+    top: 128px;
     bottom: auto;
     right: 25px;
     left: auto;
