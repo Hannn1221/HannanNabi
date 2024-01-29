@@ -16,6 +16,48 @@ header h1 {
     padding: 0;
     margin: 0; /* Remove the default margin */
 }
+.about {
+    display: flex;
+}
+.about .image {
+    order: 1;
+}
+
+.about .text {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    color: #fff; /* White text color for black background */
+    font-family: Arial, sans-serif;
+    background-color: grey; /* Black color */
+    padding-top: 50px; /* Space for the fixed navbar */
+    order: 2;
+}
+.light-bulb img {
+    width: 55px; /* Adjust this value as needed */
+    height: 55px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+.light-bulb {
+    display: flex;
+    position: absolute;
+    top: 90px;
+    bottom: auto;
+    right: 25px;
+    left: auto;
+}
+
+#lighton {
+    display: none;
+}
+.light-bulb:hover #lighton {
+    display: block;
+}
+
+.light-bulb:hover #lightoff {
+    display: none;
+}
 
 /* Reset default styles */
 ul {
@@ -148,7 +190,11 @@ body {
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 /* CSS for medium screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px)  {
+    .container {
+        flex-direction: column;
+    }
+}
     body {
         font-size: 0.8em;
     }
@@ -156,6 +202,13 @@ body {
     header {
         margin-left: 20px;
     }
+    img {
+        float: left;
+        padding: 0.2em;
+        display: flexbox;
+        margin-right: 200px; /* Adjust this value as needed */
+        width: 65%; /* Adjust this value as needed */
+        height: auto; /* Keeps the aspect ratio */
 
     nav ul {
         flex-direction: column;
@@ -175,7 +228,14 @@ body {
     header {
         margin-left: 10px;
     }
-
+img {
+    float: left;
+    padding: 0.2em;
+    display: flexbox;
+    margin-right: 200px; /* Adjust this value as needed */
+    width: 65%; /* Adjust this value as needed */
+    height: auto; /* Keeps the aspect ratio */
+    }
     nav ul {
         flex-direction: column;
     }
