@@ -33,10 +33,13 @@ header h1 {
     padding-top: 50px; /* Space for the fixed navbar */
     order: 2;
 }
-.light-bulb img {
-    width: 55px; /* Adjust this value as needed */
-    height: 55px; /* Adjust this value as needed */
-    object-fit: cover;
+.light-bulb {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    bottom: auto;
+    right: 25px;
+    left: auto;
 }
 
 .light-bulb {
