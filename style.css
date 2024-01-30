@@ -29,9 +29,9 @@ header {
 header h1 {
     z-index: 10002;
     position: relative;
-    bottom: 25px;
+    bottom: 22px;
     left: -650px;
-    margin-left: 10px; /* Adjust this value as needed */
+    margin-left: 15px; /* Adjust this value as needed */
     font-size: x-large;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
