@@ -13,6 +13,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: grey; /* Black color */
     padding-top: 50px; /* Space for the fixed navbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 /* Header styling */
@@ -76,31 +77,30 @@ nav a:hover {
     background-color: grey;
     color: whitesmoke;
 }
-p {
-    padding: 0px; /* Space around the paragraph */
-    margin: 1.5px 0; /* Space above and below the paragraph */
-    line-height: 1.5; /* Space between lines of text */
-    text-indent: 50px; /* Indentation of the first line */
-}
 
 /* Content section styling */
 section {
     text-align: center;
     margin: auto;
     padding: 3em;
-    width: 80%; /* Adjust this value as needed */
+    width: 100%; /* Adjusted to take full width */
     margin-top: 70px; /* Space for the fixed navbar */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+
 /* Light-bulb styling */
 .light-bulb {
-    position: relative;
-    right: -485px;
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    left: 675px; /* Adjust the left position as needed */
+    right: 35px;
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
 .light-bulb img {
+    padding-bottom: 20px;
     max-width: 137px;
     height: auto;
     object-fit: cover;
@@ -123,7 +123,7 @@ section {
 img {
     float: left;
     padding: 0.2em;
-    margin-right: 200px; /* Adjust this value as needed */
+    margin-right: 5%; /* Adjusted to take 5% of the container width */
     width: 65%; /* Adjust this value as needed */
     height: auto; /* Keeps the aspect ratio */
 }
@@ -143,7 +143,13 @@ img {
     display: block; /* Removes the default space below the image */
     margin: 0 auto; /* Centers the image within its cell */
 }
-
+#about {
+    margin-top: 180px;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Clear the float after the image */
 section::after {
     content: "";
@@ -156,8 +162,9 @@ section {
     text-align: center;
     margin: auto;
     padding: 2em;
-    width: 80%; /* Adjust this value as needed */
+    width: 100%; /* Adjusted to take full width */
     margin-top: 50px; /* Space for the fixed navbar */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Push footer to the bottom */
