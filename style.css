@@ -92,7 +92,7 @@ section {
 .light-bulb {
     position: absolute;
     top: 50px; /* Adjust the top position as needed */
-    left: 605px; /* Adjust the left position as needed */
+    left: 550px; /* Adjust the left position as needed */
     right: 35px;
     display: flex;
     align-items: center;
