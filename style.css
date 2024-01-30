@@ -93,7 +93,7 @@ section {
     padding-left: 10PX;
     position: absolute;
     top: 50px; /* Adjust the top position as needed */
-    left: 695px; /* Adjust the left position as needed */
+    left: 655px; /* Adjust the left position as needed */
     right: 200px;
     display: flex;
     align-items: center;
@@ -228,12 +228,28 @@ footer {
         margin-left: 10px;
     }
 
-    img {
-        float: left;
-        padding: 0.2em;
-        margin-right: 10px; /* Adjust this value as needed */
-        width: 100%; /* Adjust this value as needed */
-        height: auto; /* Keeps the aspect ratio */
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        position: relative; /* Make the parent relative */
+    }
+
+    .image {
+        display: block;
+        height: auto;
+        order: 2; /* Change the order of the image to ensure it appears below the text */
+        width: 100%; /* Set the width to 100% to prevent shrinking */
+        min-width: 50%; /* Set a minimum width for the image */
+    }
+
+    .light-bulb {
+        position: relative; /* Position the light-bulb relatively within the "About Me" section */
+        top: 10px; /* Adjust this value as needed */
+        right: 10px; /* Adjust this value as needed */
+        order: 1; /* Change the order to ensure it appears above the text */
+    }
+
+    .light-bulb:hover #lightoff {
+        display: none;
     }
 
     nav ul {
@@ -241,6 +257,7 @@ footer {
     }
 
     nav a {
-        padding: 2px 4px;
+        padding: 8px 10px;
     }
 }
+
