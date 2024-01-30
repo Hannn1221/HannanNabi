@@ -112,7 +112,7 @@ section {
 /* Light-bulb styling */
 .light-bulb {
     position: relative;
-    right: -495px;
+    right: -400px;
     display: flex;
     align-items: center;
     margin-top: 10px;
