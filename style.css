@@ -90,9 +90,10 @@ section {
 
 /* Light-bulb styling */
 .light-bulb {
+    padding-left: 10PX;
     position: absolute;
     top: 50px; /* Adjust the top position as needed */
-    left: 675px; /* Adjust the left position as needed */
+    left: 695px; /* Adjust the left position as needed */
     right: 200px;
     display: flex;
     align-items: center;
