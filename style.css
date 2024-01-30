@@ -92,7 +92,7 @@ section {
 .light-bulb {
     position: absolute;
     top: 50px; /* Adjust the top position as needed */
-    left: 675px; /* Adjust the left position as needed */
+    left: 625px; /* Adjust the left position as needed */
     right: 35px;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@ section {
 }
 
 .light-bulb img {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     max-width: 137px;
     height: auto;
     object-fit: cover;
