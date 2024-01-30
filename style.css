@@ -1,44 +1,29 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-left: 40px; /* Adjust this value as needed */
-    padding: 0.5em; /* Space around the title */
-    padding-bottom: 2em; /* Space below the header */
-    z-index: 1001; /* Higher z-index than the nav */
-}
-
-header h1 {
-    font-size: x-large;
-    font-family: sans-serif;
-    font-weight: 60;
-    color: black;
-    padding: 0;
-    margin: 0; /* Remove the default margin */
-}
-.about {
-    top: 2%;
-    bottom: auto;
-    display: flex;
-}
-.about .image {
-    order: 1;
-}
-
-.about .text {
+/* Reset default styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Default styles */
+body {
     text-align: right;
+    line-height: 1.5; /* Space between lines of text */
     color: #fff; /* White text color for black background */
     font-family: Arial, sans-serif;
     background-color: grey; /* Black color */
     padding-top: 50px; /* Space for the fixed navbar */
-    order: 2;
 }
-.light-bulb img {
-    max-width: 55px; /* Adjust this value as needed */
-    height: auto; /* Adjust this value as needed */
-    object-fit: cover;
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    z-index: 1003;
+    text-align: center;
 }
 
 .light-bulb {
@@ -47,7 +32,7 @@ header h1 {
     position: absolute;
     top: 128px;
     bottom: auto;
-    right: 12px;
+    right: 25px;
     left: auto;
 }
 
@@ -70,7 +55,6 @@ ul {
 }
 html {
     margin: 0;
-    padding: 0;
 }
 
 /* Navigation bar styling */
@@ -81,7 +65,8 @@ nav {
     position: fixed;
     margin: 0;
     top: 0;
-    z-index: 1000;
+    left: -20px;
+    z-index: 1200;
 }
 
 nav ul {
@@ -104,25 +89,63 @@ nav a {
     text-decoration: none;
 }
 
-/* Change the link color on hover */
+/*  color on hover */
 nav a:hover {
     background-color: grey;
     color: whitesmoke;
 }
+p {
+    padding: 0px; /* Space around the paragraph */
+    margin: 1.5px 0; /* Space above and below the paragraph */
+    line-height: 1.5; /* Space between lines of text */
+    text-indent: 50px; /* Indentation of the first line */
+}
 
-#about-me p {
-    text-align: justify;
+/* Content section styling */
+section {
+    text-align: center;
+    margin: auto;
+    padding: 3em;
+    width: 80%; /* Adjust this value as needed */
+    margin-top: 70px; /* Space for the fixed navbar */
+}
+/* Light-bulb styling */
+.light-bulb {
+    position: relative;
+    right: -450px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.light-bulb img {
+    max-width: 137px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.light-bulb #lighton {
+    display: none;
+}
+
+.light-bulb:hover #lighton {
+    display: block;
+}
+
+.light-bulb:hover #lightoff {
+    display: none;
 }
 
 /* Add padding to the image */
 img {
     float: left;
     padding: 0.2em;
-    display: flexbox;
     margin-right: 200px; /* Adjust this value as needed */
     width: 65%; /* Adjust this value as needed */
     height: auto; /* Keeps the aspect ratio */
 }
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -139,23 +162,13 @@ img {
     margin: 0 auto; /* Centers the image within its cell */
 }
 
-.work-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 /* Clear the float after the image */
 section::after {
     content: "";
     display: table;
     clear: both;
 }
+
 /* Style for the content sections */
 section {
     text-align: center;
@@ -169,35 +182,27 @@ section {
 footer {
     text-align: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    color: #fff; /* White text color for black background */
-    font-family: Arial, sans-serif;
-    background-color: grey; /* Black color */
-    padding-top: 50px; /* Space for the fixed navbar */
-}
+/* Contact Me section styling */
 #contact {
+    justify-content: center;
+    text-align: center;
+    padding: 0px; /* Space around the paragraph */
+    margin: 4px auto; /* Space above and below the paragraph */
+    line-height: 1.5; /* Space between lines of text */
+    text-indent: 50px; /* Indentation of the first line */
     color: white;
     align-items: center;
-    justify-content: center;
     background-color: transparent; /* Transparent background */
     border-radius: 10px; /* Rounded corners */
-    padding: 1em; /* Space around the content */
-    margin: 0.5em auto; /* Space between the sections and auto margins on the sides */
-    height: auto;
-    width: 20%; /* Adjust this value as needed */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    letter-spacing: 0.1em; /* Additional space between letters */
 }
+
 /* CSS for medium screens */
-@media screen and (max-width: 768px)  {
-    .container {
-        flex-direction: column;
-    }
-}
+@media screen and (max-width: 768px) {
     body {
         font-size: 0.8em;
     }
@@ -205,13 +210,14 @@ body {
     header {
         margin-left: 20px;
     }
+
     img {
         float: left;
         padding: 0.2em;
-        display: flexbox;
-        margin-right: 200px; /* Adjust this value as needed */
-        width: 65%; /* Adjust this value as needed */
+        margin-right: 20px; /* Adjust this value as needed */
+        width: 100%; /* Adjust this value as needed */
         height: auto; /* Keeps the aspect ratio */
+    }
 
     nav ul {
         flex-direction: column;
@@ -231,14 +237,15 @@ body {
     header {
         margin-left: 10px;
     }
-img {
-    float: left;
-    padding: 0.2em;
-    display: flexbox;
-    margin-right: 200px; /* Adjust this value as needed */
-    width: 65%; /* Adjust this value as needed */
-    height: auto; /* Keeps the aspect ratio */
+
+    img {
+        float: left;
+        padding: 0.2em;
+        margin-right: 10px; /* Adjust this value as needed */
+        width: 100%; /* Adjust this value as needed */
+        height: auto; /* Keeps the aspect ratio */
     }
+
     nav ul {
         flex-direction: column;
     }
