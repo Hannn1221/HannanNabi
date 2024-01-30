@@ -26,34 +26,16 @@ header {
     text-align: center;
 }
 
-.light-bulb {
-    z-index: 1500;
-    display: flex;
-    position: absolute;
-    top: 128px;
-    bottom: auto;
-    right: 25px;
-    left: auto;
-}
-
-#lighton {
-    display: none;
-}
-.light-bulb:hover #lighton {
-    display: block;
-}
-
-.light-bulb:hover #lightoff {
-    display: none;
-}
-
-/* Reset default styles */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-html {
+header h1 {
+    z-index: 10002;
+    position: relative;
+    bottom: 25px;
+    left: -650px;
+    margin-left: 10px; /* Adjust this value as needed */
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: black;
     margin: 0;
 }
 
@@ -112,7 +94,7 @@ section {
 /* Light-bulb styling */
 .light-bulb {
     position: relative;
-    right: -445px;
+    right: -485px;
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -251,6 +233,6 @@ footer {
     }
 
     nav a {
-        padding: 8px 10px;
+        padding: 2px 4px;
     }
 }
