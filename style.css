@@ -39,31 +39,32 @@ header h1 {
 
 /* Navigation bar styling */
 nav {
-    padding: 4px 3px;
+    box-sizing: border-box;
     width: 100%;
     background-color: white;
     position: fixed;
+    margin: 0;
     top: 0;
     z-index: 1000;
 }
 
 nav ul {
-    bottom: -5px;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
 }
 
 nav li {
-    bottom: -30px;
-    margin: 5px; /* Add some margin between navigation items */
+    margin: 0;
 }
 
 nav a {
     display: block;
     color: black;
+    margin: 0;
     text-align: center;
-    padding: 4px 8px;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
