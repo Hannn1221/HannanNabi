@@ -1,13 +1,14 @@
 /* Reset default styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Default styles */
 body {
-    margin: 0;
-    padding: 0;
     text-align: right;
+    line-height: 1.5; /* Space between lines of text */
     color: #fff; /* White text color for black background */
     font-family: Arial, sans-serif;
     background-color: grey; /* Black color */
@@ -21,14 +22,15 @@ header {
     left: 0;
     width: 100%;
     padding: 2em;
-    z-index: 1001;
+    z-index: 1003;
     text-align: center;
 }
 
 header h1 {
+    z-index: 10002;
     position: relative;
-    bottom: 10px;
-    left: -620px;
+    bottom: 25px;
+    left: -650px;
     margin-left: 10px; /* Adjust this value as needed */
     font-size: x-large;
     font-family: 'Roboto', sans-serif;
@@ -45,7 +47,8 @@ nav {
     position: fixed;
     margin: 0;
     top: 0;
-    z-index: 1000;
+    left: 0px;
+    z-index: 1200;
 }
 
 nav ul {
@@ -68,54 +71,30 @@ nav a {
     text-decoration: none;
 }
 
-/* Change the link color on hover */
+/*  color on hover */
 nav a:hover {
     background-color: grey;
     color: whitesmoke;
+}
+p {
+    padding: 0px; /* Space around the paragraph */
+    margin: 1.5px 0; /* Space above and below the paragraph */
+    line-height: 1.5; /* Space between lines of text */
+    text-indent: 50px; /* Indentation of the first line */
 }
 
 /* Content section styling */
 section {
     text-align: center;
-    padding: 2em;
-    width: 90%; /* Adjust this value for smaller screens */
     margin: auto;
-    margin-top: 50px;
+    padding: 3em;
+    width: 80%; /* Adjust this value as needed */
+    margin-top: 70px; /* Space for the fixed navbar */
 }
-
-/* About Me section styling */
-#about {
-    top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-content {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.about .image-row {
-    width: 20%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.about .image-row img {
-    margin-right: 0; /* Remove the right margin for images in the about section */
-    width: 100%; /* Make images take up the full width of the container */
-    max-width: 30%; /* Remove the maximum width for responsiveness */
-    margin-bottom: 10px; /* Add some margin below each image */
-}
-
 /* Light-bulb styling */
 .light-bulb {
     position: relative;
-    right: -270px;
+    right: -485px;
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -140,46 +119,68 @@ section {
     display: none;
 }
 
-/* ... (Rest of the styles) ... */
-
-/* Portfolio section styling */
-#portfolio {
-    text-align: center;
-}
-
-/* Outside Work section styling */
-#outside-work {
-    text-align: center;
+/* Add padding to the image */
+img {
+    float: left;
+    padding: 0.2em;
+    margin-right: 200px; /* Adjust this value as needed */
+    width: 65%; /* Adjust this value as needed */
+    height: auto; /* Keeps the aspect ratio */
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust this value to change the space between the images */
+    justify-content: center; /* Horizontal centering */
+    align-content: center; /* Vertical centering */
 }
 
 .image-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: 100%; /* Full width of the cell */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the entire area of the cell without distortion */
+    display: block; /* Removes the default space below the image */
+    margin: 0 auto; /* Centers the image within its cell */
+}
+
+/* Clear the float after the image */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style for the content sections */
+section {
+    text-align: center;
+    margin: auto;
+    padding: 2em;
+    width: 80%; /* Adjust this value as needed */
+    margin-top: 50px; /* Space for the fixed navbar */
+}
+
+/* Push footer to the bottom */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Contact Me section styling */
 #contact {
-    color: white;
-    background-color: transparent;
-    border-radius: 10px;
-    padding: 1em;
-    margin: 0.5em auto;
-    width: 80%;
-    box-sizing: border-box;
-}
-
-/* Footer styling */
-footer {
+    justify-content: center;
     text-align: center;
-    padding-top: 20px;
+    padding: 0px; /* Space around the paragraph */
+    margin: 4px auto; /* Space above and below the paragraph */
+    line-height: 1.5; /* Space between lines of text */
+    text-indent: 50px; /* Indentation of the first line */
+    color: white;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    letter-spacing: 0.1em; /* Additional space between letters */
 }
 
 /* CSS for medium screens */
@@ -195,7 +196,6 @@ footer {
     img {
         float: left;
         padding: 0.2em;
-        display: flexbox;
         margin-right: 20px; /* Adjust this value as needed */
         width: 100%; /* Adjust this value as needed */
         height: auto; /* Keeps the aspect ratio */
@@ -223,7 +223,6 @@ footer {
     img {
         float: left;
         padding: 0.2em;
-        display: flexbox;
         margin-right: 10px; /* Adjust this value as needed */
         width: 100%; /* Adjust this value as needed */
         height: auto; /* Keeps the aspect ratio */
