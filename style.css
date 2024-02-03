@@ -1,263 +1,516 @@
-/* Reset default styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* Styles defined for the desktop or the bigger screen devices*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 
-/* Default styles */
-body {
-    text-align: right;
-    line-height: 1.5; /* Space between lines of text */
-    color: #fff; /* White text color for black background */
-    font-family: Arial, sans-serif;
-    background-color: grey; /* Black color */
-    padding-top: 50px; /* Space for the fixed navbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}
+body { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	font-family: 'Poppins', sans-serif; 
+} 
 
-/* Header styling */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2em;
-    z-index: 1003;
-    text-align: center;
-}
+/* Header Navbar Styles */
+.navbar { 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between; 
+	position: fixed; 
+	top: 0; 
+	width: 100%; 
+	background-image: linear-gradient(90deg, #4d4e4e, #6e7071, #9b9d9f); 
+	background-color: transparent; 
+} 
 
-header h1 {
-    z-index: 10002;
-    position: relative;
-    bottom: 22px;
-    left: -650px;
-    margin-left: 15px; /* Adjust this value as needed */
-    font-size: x-large;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: black;
-    margin: 0;
-}
+.logo { 
+	padding: 0 5rem; 
+} 
 
-/* Navigation bar styling */
-nav {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    margin: 0;
-    top: 0;
-    right: 0;
-    z-index: 1600;
-}
+.logo .logo-heading { 
+	color: #fff; 
+} 
 
-nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+.menu { 
+	padding: 0 5rem; 
+} 
 
-nav li {
-    margin: 0;
-}
+.hamburger { 
+	display: none; 
+	color: #fff; 
+	font-size: 25px; 
+} 
 
-nav a {
-    display: block;
-    color: black;
-    margin: 0;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+.cross-icon { 
+	display: none; 
+} 
 
-/*  color on hover */
-nav a:hover {
-    background-color: grey;
-    color: whitesmoke;
-}
+.menu .menu-list { 
+	display: flex; 
+	list-style: none; 
+} 
 
-/* Content section styling */
-section {
-    text-align: center;
-    margin: auto;
-    padding: 3em;
-    width: 100%; /* Adjusted to take full width */
-    margin-top: 70px; /* Space for the fixed navbar */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
+.menu-list .menu-list-items { 
+	padding: 0.5rem 1rem; 
+} 
 
-/* Light-bulb styling */
-.light-bulb {
-    padding-left: 10PX;
-    position: absolute;
-    top: 50px; /* Adjust the top position as needed */
-    left: 655px; /* Adjust the left position as needed */
-    right: 200px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
+@media screen and (min-width: 856px) and (max-width: 1024px) { 
+	.menu-list .menu-list-items { 
+		padding: 0.5rem 0.3rem; 
+	} 
+} 
+
+/* Main Hero Section Styles */
+.hero { 
+  background-image: url('hero.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: 100% 100%; 
+  width: 100%; 
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: start; 
+  margin: 4.8rem 0; 
+} 
+
+.hero .intro { 
+  color: rgb(236, 236, 236);
+	text-align: center; 
+	margin: 0 5rem; 
+} 
+.hero .sub-heading { 
+  color: rgb(239, 237, 237);
+  font-size: small;
+} 
+
+.hero .intro-buttons { 
+	margin: 2rem 0; 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-evenly; 
+} 
 
 .light-bulb img {
-    padding-bottom: 10px;
-    max-width: 137px;
-    height: auto;
-    object-fit: cover;
-    margin-right: 0px;
+  margin-left: -20px;
+  position: relative;
+  padding-bottom: 10px;
+  max-width: 120px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 0px;
 }
 
 .light-bulb #lighton {
-    display: none;
+  display: none;
 }
 
 .light-bulb:hover #lighton {
-    display: block;
+  display: block;
+  margin-left: 180px;
+  
 }
 
 .light-bulb:hover #lightoff {
-    display: none;
+  display: none;
 }
 
-/* Add padding to the image */
-img {
-    float: left;
-    padding: 0.2em;
-    margin-right: 5%; /* Adjusted to take 5% of the container width */
-    width: 65%; /* Adjust this value as needed */
-    height: auto; /* Keeps the aspect ratio */
+/* About section styles */
+.about { 
+	display: flex; 
+	align-items: center; 
+	background-image: linear-gradient(45deg, #6e7071, #9b9d9f); 
+	justify-content: space-between; 
+	width: 100%; 
+} 
+
+.about .about-text { 
+	width: 450px; 
+	color: #fff; 
+	padding: 5rem 1rem 5rem 5rem; 
+} 
+
+.about .about-image img { 
+	height: 450px; 
+	width: auto; 
+	padding: 5rem 5rem 5rem 1rem; 
+} 
+
+/* Services section styles */
+.services { 
+  color: rgb(0, 0, 0);
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; 
+	margin: 4.8rem 0; 
+	padding: 0 5rem; 
+} 
+.service-heading {
+	color: rgb(210, 210, 210);
+}
+.my-row { 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between; 
+	margin: 2rem 0; 
+} 
+.my-row .my-col{ 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center; 
+  	min-height: 200px;
+	width: 32%; 
+} 
+.my-card:hover { 
+  cursor: pointer; 
+} 
+.my-card { 
+height: 320px;
+width: 320px;
+margin: 10px;
+	text-align: center; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center; 
+	border-radius: 20px; 
+	background-image: linear-gradient(#505151, #6e7071, #9b9d9f); 
+	padding: 3rem; 
+} 
+
+.icon { 
+	height: 100px; 
+	width: 100px; 
+	border-radius: 50%; 
+	background-color: #9b9d9f; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+} 
+
+.icon svg { 
+	font-size: 30px; 
+	color: #fff; 
+} 
+
+/* Contact section styles */
+.contact { 
+  justify-content: center;
+	padding: 0 5rem; 
+} 
+
+.contact-content { 
+  justify-content: center;
+	display: flex; 
+	margin: 3rem 0; 
+	justify-content: space-between; 
+} 
+
+.contact-details { 
+	width: 50%; 
+} 
+
+/* Social Icons Styles */
+.social-icons {
+  position: relative;
+  top: 50px;
+  right: 350px;
+  display: flex;
+  gap: 10px;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* Adjust this value to change the space between the images */
-    justify-content: center; /* Horizontal centering */
-    align-content: center; /* Vertical centering */
+.social-icons a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
 }
 
-.image-grid img {
-    width: 100%; /* Full width of the cell */
-    height: auto; /* Keep the aspect ratio */
-    object-fit: cover; /* Ensures the image covers the entire area of the cell without distortion */
-    display: block; /* Removes the default space below the image */
-    margin: 0 auto; /* Centers the image within its cell */
-}
-#about {
-    margin-top: 180px;
-    bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* Clear the float after the image */
-section::after {
-    content: "";
-    display: table;
-    clear: both;
+.social-icons a:hover {
+  color: #9c9c9c; /* Change to your preferred hover color */
 }
 
-/* Style for the content sections */
-section {
-    text-align: center;
-    margin: auto;
-    padding: 2em;
-    width: 100%; /* Adjusted to take full width */
-    margin-top: 50px; /* Space for the fixed navbar */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+/* Footer Styles */
+.footer { 
+  align-items: left;
+	background-color: #000; 
+	color: #fff; 
+	padding: 2rem; 
+} 
+
+.footer-menu { 
+	padding: 0 5rem; 
+} 
+
+.footer-menu .footer-menu-list { 
+	display: flex; 
+	list-style: none; 
+} 
+
+/* utility classes */
+.greet-heading { 
+	font-size: 1.3rem; 
+	font-weight: lighter; 
+	margin: 0; 
+	letter-spacing: 1px; 
+} 
+
+.service-link {
+  color: #dfdfdf;
+  font-size: 1.3rem; 
+	font-weight: lighter; 
+	margin: 0; 
+	letter-spacing: 1px; 
 }
 
-/* Push footer to the bottom */
-footer {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.my-heading { 
+	font-size: 2.5rem; 
+	margin: 0; 
+} 
+
+.sub-heading { 
+	margin: 0; 
+	font-size: 0.8rem; 
+	color: #ccc; 
+	font-weight: lighter; 
+} 
+
+.links:hover { 
+	border-bottom: 2px solid #fff; 
+} 
+
+.links { 
+	border-bottom: 2px solid transparent; 
+	transition: all 0.25s; 
+	padding: 5px; 
+	text-decoration: none; 
+	color: #fff; 
+} 
+
+.btn { 
+	padding: 10px 20px; 
+	border-radius: 5px; 
+	cursor: pointer; 
+	letter-spacing: 1px; 
+	border: none; 
+} 
+
+.common-btn { 
+	background-color: #6e7071; 
+	color: #fff; 
+	border: 2px solid #6e7071; 
+	transition: all 0.25s; 
+} 
+
+.common-btn:hover { 
+	background-color: #fff; 
+	color: #6e7071; 
+	border: 2px solid #6e7071; 
+	outline: none; 
+} 
+
+.ghost-btn { 
+	background-color: #6e7071; 
+	color: #fff; 
+	border: 2px solid #6e7071; 
+	outline: none; 
+} 
+
+.ghost-btn:hover { 
+	background-color: #fff; 
+	color: #6e7071; 
+	transition: all 0.25s; 
+	border: 2px solid #6e7071; 
+} 
+
+.heading-span { 
+	font-weight: bolder; 
+} 
+
+.text-center { 
+	text-align: center; 
+} 
+
+.small-para { 
+	font-size: 14px; 
+	color: #fff; 
+} 
+
+.white-text { 
+	color: #fff; 
+} 
+
+.blue-text { 
+	color: #c5c5c5; 
 }
 
-/* Contact Me section styling */
-#contact {
-    justify-content: center;
-    text-align: center;
-    padding: 0px; /* Space around the paragraph */
-    margin: 4px auto; /* Space above and below the paragraph */
-    line-height: 1.5; /* Space between lines of text */
-    text-indent: 50px; /* Indentation of the first line */
-    color: white;
-    align-items: center;
-    background-color: transparent; /* Transparent background */
-    border-radius: 10px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    letter-spacing: 0.1em; /* Additional space between letters */
+/* Responsive CSS file styles defined for smaller width devices */
+/* CSS for tablet devices */
+@media screen and (min-width: 576px) and (max-width: 820px) { 
+	.logo { 
+		padding: 0 3rem; 
+	} 
+
+	.hamburger { 
+		display: block; 
+		padding: 0 3rem; 
+	} 
+
+	.menu { 
+		position: absolute; 
+		right: 0; 
+		padding: 0 3rem; 
+		top: 75px; 
+		background-image: linear-gradient(180deg, #74D7BB, #53C8B6, #35A99C); 
+		display: none; 
+		transition: all 0.25s; 
+	} 
+
+	.menu .menu-list { 
+		flex-direction: column; 
+	} 
+
+	.portfolio { 
+		padding: 0; 
+	} 
+
+	.about { 
+		flex-direction: column; 
+	} 
+
+	.about .about-text { 
+		padding: 2rem; 
+	} 
+
+	.about .about-image img { 
+		padding: 2rem; 
+	} 
+
+	.services { 
+		padding: 0; 
+	} 
+
+	.my-row { 
+		gap: 10px; 
+	} 
+
+	.my-row .my-col { 
+		text-align: center; 
+		width: 35%; 
+	} 
+
+} 
+
+
+/* CSS for mobile devices */
+@media screen and (min-width: 280px) and (max-width: 576px) { 
+	.hero { 
+		justify-content: center; 
+		color: #fff; 
+		background-image: radial-gradient(circle, rgb(15 14 14 / 30%), rgb(102 96 96 / 40%), rgb(163 160 160 / 16%)), url('./Images/heroImg3.avif') 
+	} 
+
+	.sub-heading { 
+		color: #fff9f9cc; 
+	} 
+
+	.hero .intro-buttons { 
+		gap: 20px; 
+	} 
+
+	.btn { 
+		padding: 10px 30px; 
+	} 
+
+	.logo { 
+		padding: 0 2rem; 
+	} 
+
+	.menu { 
+		position: absolute; 
+		right: 0; 
+		padding: 0 2rem; 
+		top: 75px; 
+		background-image: linear-gradient(180deg, #35A99C, #53C8B6, #74D7BB); 
+		display: none; 
+		transition: all 0.25s; 
+	} 
+
+	.menu .menu-list { 
+		flex-direction: column; 
+	} 
+
+	.hamburger { 
+		display: block; 
+		padding: 0 2rem; 
+	} 
+
+	.portfolio { 
+		padding: 0; 
+	} 
+
+	.about { 
+		flex-direction: column; 
+	} 
+
+	.about .about-text { 
+		width: 90%; 
+		padding: 1rem; 
+	} 
+
+	.about .about-image img { 
+		width: 90%; 
+		padding: 1rem; 
+	} 
+
+	.services { 
+		padding: 0; 
+	} 
+
+	.my-row { 
+		display: flex; 
+		align-items: center; 
+		justify-content: space-between; 
+		flex-direction: column; 
+		margin: 2rem 0; 
+		gap: 1rem; 
+	} 
+
+	.my-row .my-col { 
+		text-align: center; 
+		width: 100%; 
+	} 
+
+	.contact { 
+		padding: 0; 
+	} 
+
+	.contact-content { 
+		flex-direction: column; 
+		align-items: center; 
+		gap: 2rem; 
+	} 
+
+	.contact-form-container { 
+		width: 80%; 
+	} 
+
+	.contact-form .form-controls { 
+		width: 100%; 
+	} 
+
+	.contact-form .form-btn { 
+		width: 100%; 
+	} 
+
+	.contact-details { 
+		width: 80%; 
+	} 
+
+	.footer-menu { 
+		padding: 0 2rem; 
+	} 
+
+	.footer-list-items { 
+		margin: 0; 
+	} 
 }
-
-/* CSS for medium screens */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 0.8em;
-    }
-
-    header {
-        margin-left: 20px;
-    }
-
-    img {
-        float: left;
-        padding: 0.2em;
-        margin-right: 20px; /* Adjust this value as needed */
-        width: 100%; /* Adjust this value as needed */
-        height: auto; /* Keeps the aspect ratio */
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav a {
-        padding: 10px 12px;
-    }
-}
-
-/* CSS for small screens */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 0.6em;
-    }
-
-    header {
-        margin-left: 10px;
-    }
-
-    .about {
-        flex-direction: column; /* Stack items vertically */
-        position: relative; /* Make the parent relative */
-    }
-
-    .image {
-        display: block;
-        height: auto;
-        order: 2; /* Change the order of the image to ensure it appears below the text */
-        width: 100%; /* Set the width to 100% to prevent shrinking */
-        min-width: 50%; /* Set a minimum width for the image */
-    }
-
-    .light-bulb {
-        position: relative; /* Position the light-bulb relatively within the "About Me" section */
-        top: 10px; /* Adjust this value as needed */
-        right: 10px; /* Adjust this value as needed */
-        order: 1; /* Change the order to ensure it appears above the text */
-    }
-
-    .light-bulb:hover #lightoff {
-        display: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav a {
-        padding: 8px 10px;
-    }
-}
-
