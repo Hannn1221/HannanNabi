@@ -1,17 +1,45 @@
-// Example: Toggle mobile menu visibility
-document.querySelector('.menu-icon').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('visible');
-});
-document.querySelector('#contact form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+const hamburger = document.getElementById('hamburger'); 
+const menu = document.querySelector('.menu'); 
 
-    var formData = {};
-    formData['name'] = document.querySelector('#contact input[name="name"]').value;
-    formData['email'] = document.querySelector('#contact input[name="email"]').value;
-    formData['message'] = document.querySelector('#contact textarea[name="description"]').value;
-
-    // Store the form data in localStorage
-    localStorage.setItem('formData', JSON.stringify(formData));
+hamburger.addEventListener('click', function () { 
+	const hamIcon = this.querySelector('.hamburger-icon'); 
+	const crossIcon = this.querySelector('.cross-icon'); 
+	if (hamIcon.style.display === "none") { 
+		hamIcon.style.display = "inline-block"
+		menu.style.display = "none"
+		crossIcon.style.display = "none"
+	} 
+	else { 
+		crossIcon.style.display = "inline-block"
+		hamIcon.style.display = "none"
+		menu.style.display = "block"
+	} 
 });
-var storedFormData = JSON.parse(localStorage.getItem('formData'));
-console.log(storedFormData); // Logs the stored form data to the console
+
+    // Function to trigger the PDF download
+    function downloadResume() {
+        // Replace 'path/to/resume.pdf' with the actual path to your PDF file
+        var pdfPath = 'Resume.pdf';
+
+        // Create an invisible link element
+        var link = document.createElement('a');
+        link.href = pdfPath;
+        link.download = 'resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Function to open the email client to send an email
+    function sendEmail() {
+        // Replace 'hannannabi@gmail.com' with your actual email address
+        var emailAddress = 'hannannabi@gmail.com';
+        
+        // Use mailto with the subject and body parameters
+        var subject = 'Job Opportunity';
+        var body = 'I am interested in hiring you.';
+
+        window.location.href = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+
+
