@@ -172,17 +172,18 @@ p {
     line-height: 1.6;
 }
 
-/* Photo grid */
 .photos-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive column sizing */
+    gap: 10px; /* Space between images */
+    margin: 20px; /* Optional: Add margin to the grid container */
 }
 
 .photos-grid img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 100%; /* Ensure images take full width of their container */
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Crop images to fit */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Circular cursor object */
