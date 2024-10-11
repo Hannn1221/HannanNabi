@@ -10,6 +10,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
     display: flex;
+    flex-direction: column; /* Change to column for mobile layout */
     height: 100vh;
     overflow: hidden;
 }
@@ -120,6 +121,7 @@ body {
     justify-content: center;
     position: fixed;
     height: 100%;
+    z-index: 999; /* Ensures it’s above other content */
 }
 
 .menu ul {
@@ -146,7 +148,7 @@ body {
     margin-left: 250px; /* Space for the fixed menu */
     width: calc(100% - 250px);
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto; /* Allow vertical scrolling */
     scroll-behavior: smooth;
 }
 
@@ -201,6 +203,8 @@ p {
     .menu {
         width: 100%; /* Full width on mobile */
         padding: 20px; /* Less padding */
+        position: relative; /* Change to relative for stacking */
+        height: auto; /* Adjust height */
     }
 
     /* Adjust content area */
@@ -223,6 +227,12 @@ p {
     .resume-button {
         font-size: 1.2em; /* Smaller button size on mobile */
         padding: 8px 0; /* Reduce padding */
+    }
+
+    /* Ensure the header and menu are visible on mobile */
+    .branding {
+        position: relative; /* Make sure branding is visible */
+        margin: 10px; /* Add margin for spacing */
     }
 }
 
