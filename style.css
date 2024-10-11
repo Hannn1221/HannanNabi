@@ -8,7 +8,6 @@
 body {
     background: linear-gradient(to right, #f7f7f7, #ececec); /* Subtle gradient */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f7f7f7;
     color: #333;
     display: flex;
     height: 100vh;
@@ -194,4 +193,48 @@ p {
     pointer-events: none;
     transition: transform 0.1s ease;
     z-index: 1000;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust the menu for mobile */
+    .menu {
+        width: 100%; /* Full width on mobile */
+        padding: 20px; /* Less padding */
+    }
+
+    /* Adjust content area */
+    .content {
+        margin-left: 0; /* No left margin for mobile */
+        width: 100%; /* Full width */
+    }
+
+    /* Work boxes */
+    .work-box {
+        flex: 1 1 100%; /* Stack boxes on mobile */
+        margin-bottom: 20px; /* Space below each box */
+    }
+
+    /* Adjust font sizes */
+    h1 {
+        font-size: 2em; /* Smaller heading size */
+    }
+
+    .resume-button {
+        font-size: 1.2em; /* Smaller button size on mobile */
+        padding: 8px 0; /* Reduce padding */
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust work boxes for tablets */
+    .work-box {
+        flex: 1 1 45%; /* Two boxes per row */
+    }
+
+    /* Adjust font sizes */
+    h1 {
+        font-size: 2.2em; /* Slightly smaller heading size */
+    }
 }
